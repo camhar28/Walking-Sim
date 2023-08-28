@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7hbhv6hdlxdn"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_e8a60"]
+[ext_resource type="PackedScene" uid="uid://dxh1v2fmfsh58" path="res://nicolas'_basement.tscn" id="1_jouf4"]
+[ext_resource type="PackedScene" uid="uid://dqyg3gxwpltwv" path="res://player.tscn" id="2_353gh"]
+
+[node name="World" type="Node"]
+script = ExtResource("1_e8a60")
+
+[node name="Nicolas\' Basement" parent="." instance=ExtResource("1_jouf4")]
+
+[node name="Player" parent="." instance=ExtResource("2_353gh")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.46779, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1428, 7.60703, 0.327282)
+light_energy = 16.0
+light_indirect_energy = 16.0
+omni_range = 111.955
